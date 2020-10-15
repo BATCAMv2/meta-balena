@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.58.6
+## (2020-10-15)
+
+* supervisor: remove old/unnecessary balenaRootCA references [Matthew McGinn]
+
 # v2.58.5
 ## (2020-10-13)
 
