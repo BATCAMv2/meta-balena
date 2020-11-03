@@ -1,0 +1,23 @@
+From 3d8a9dd2c08fb95e85047c5d4d432f8748a54194 Mon Sep 17 00:00:00 2001
+From: Kyle Harding <kyle@balena.io>
+Date: Mon, 2 Nov 2020 14:48:04 +0000
+Subject: [PATCH] SIOCGSTAMP is defined in linux/sockios.h, not asm/sockios.h
+ now.
+ http://thekelleys.org.uk/gitweb/?p=dnsmasq.git;a=commit;h=3052ce208acf602f0163166dcefb7330d537cedb
+
+---
+ src/dnsmasq.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/dnsmasq.h b/src/dnsmasq.h
+index c30a2f1..e397813 100644
+--- a/src/dnsmasq.h
++++ b/src/dnsmasq.h
+@@ -128,6 +128,7 @@ typedef unsigned long long u64;
+ #endif
+ 
+ #if defined(HAVE_LINUX_NETWORK)
++#include <linux/sockios.h>
+ #include <linux/capability.h>
+ /* There doesn't seem to be a universally-available 
+    userspace header for these. */
