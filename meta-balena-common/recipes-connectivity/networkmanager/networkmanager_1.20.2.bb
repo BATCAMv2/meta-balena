@@ -19,7 +19,7 @@ DEPENDS = " \
     curl \
 "
 
-inherit gnomebase gettext systemd bluetooth bash-completion vala gobject-introspection gtk-doc
+inherit gnomebase gettext systemd bash-completion vala gobject-introspection gtk-doc ${@bb.utils.contains('DISTRO_CODENAME', 'dunfell', '', 'bluetooth', d)}
 
 SRC_URI = " \
     ${GNOME_MIRROR}/NetworkManager/${@gnome_verdir("${PV}")}/NetworkManager-${PV}.tar.xz \
