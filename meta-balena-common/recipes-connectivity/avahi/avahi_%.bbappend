@@ -12,8 +12,8 @@ RDEPENDS_avahi-daemon += "resin-hostname"
 do_install_append() {
     # Move example services as we don't want to advertise example services
     install -d ${D}/usr/share/doc/${PN}
-    mv ${D}/etc/avahi/services/ssh.service ${D}/usr/share/doc/${PN}/
-    mv ${D}/etc/avahi/services/sftp-ssh.service ${D}/usr/share/doc/${PN}/
+    mv ${D}/${sysconfdir}/avahi/services/ssh.service ${D}/usr/share/doc/${PN}/ || true
+    mv ${D}/${sysconfdir}/avahi/services/sftp-ssh.service ${D}/usr/share/doc/${PN}/ || true
 
     if ${@bb.utils.contains('DISTRO_FEATURES','systemd','true','false',d)}; then
         install -d ${D}${sysconfdir}/systemd/system/avahi-daemon.service.d
