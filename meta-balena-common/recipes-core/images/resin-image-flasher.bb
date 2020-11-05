@@ -2,7 +2,7 @@ SUMMARY = "Resin image flasher"
 IMAGE_LINGUAS = " "
 LICENSE = "Apache-2.0"
 
-inherit core-image image-resin distro_features_check
+inherit core-image image-resin ${@bb.utils.contains('DISTRO_CODENAME', 'dunfell', 'features_check', 'distro_features_check', d)}
 
 REQUIRED_DISTRO_FEATURES += " systemd"
 
