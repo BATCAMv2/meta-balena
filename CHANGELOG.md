@@ -1,6 +1,27 @@
 Change log
 -----------
 
+# v3.0.0
+## (2020-11-05)
+
+* avahi: remove example services if they exist [Kyle Harding]
+* systemd: update patches to avoid fuzzy matching [Kyle Harding]
+* systemd: add missing udev rules [Kyle Harding]
+* systemd: avoid conflicts with timeinit package [Kyle Harding]
+* meta-balena-dunfell: update readme [Kyle Harding]
+* meta-balena-common: avoid dropbear conflicts [Kyle Harding]
+* meta-balena-common: add bash requirement for networkmanager [Kyle Harding]
+* meta-balena-common: fix deprecated bluetooth class [Kyle Harding]
+* meta-balena-common: fix deprecated distro_features_check [Kyle Harding]
+* meta-balena-common: fix avahi to handle missing files [Kyle Harding]
+* meta-balena-dunfell: update u-boot compile func [Kyle Harding]
+* meta-balena-dunfell: patch dnsmasq [Kyle Harding]
+* meta-balena-dunfell: fix bluetooth service experimental patch [Kyle Harding]
+* meta-balena-dunfell: remove legacy mtools patch [Kyle Harding]
+* meta-balena-dunfell: updates for systemd [Kyle Harding]
+* meta-balena-dunfell: update layer conf [Kyle Harding]
+* meta-balena-dunfell: create layer [Kyle Harding]
+
 # v2.61.2
 ## (2020-11-05)
 
