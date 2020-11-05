@@ -1,4 +1,4 @@
-From 34760125c90cb23c2147cf244dcc291782cb5758 Mon Sep 17 00:00:00 2001
+From ae8b0df03e0ab5c42923862195419802f402d441 Mon Sep 17 00:00:00 2001
 From: Andrei Gherzan <andrei@resin.io>
 Date: Thu, 17 May 2018 09:25:32 +0100
 Subject: [PATCH] Don't build systemd-getty-generator
@@ -16,10 +16,10 @@ Signed-off-by: Andrei Gherzan <andrei@resin.io>
  1 file changed, 8 deletions(-)
 
 diff --git a/meson.build b/meson.build
-index 1bdb9c7b32..9c83fa5c16 100644
+index 95e84a0..474535e 100644
 --- a/meson.build
 +++ b/meson.build
-@@ -1660,14 +1660,6 @@ exe = executable('journalctl',
+@@ -1686,14 +1686,6 @@ exe = executable('journalctl',
                   install_dir : rootbindir)
  public_programs += exe
  
